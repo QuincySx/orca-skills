@@ -31,3 +31,7 @@ The sync reads only the upstream GitHub `skills` tree. It accepts exactly one
 `SKILL.md` per skill directory and stops on scripts, links, submodules, nested files, or
 other unexpected entries. It never clones or executes the upstream repository. Run the
 tests with `node --test scripts/sync.test.mjs`.
+
+GitHub Actions runs this sync every Monday at 09:00 Asia/Taipei and can also be started
+manually. When validated Skill content changes, the workflow commits only `skills/` and
+`UPSTREAM.json` back to `main` as `github-actions[bot]`.
